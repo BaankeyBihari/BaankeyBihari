@@ -1,0 +1,30 @@
+{
+  "name": "baankeybihari-portfolio",
+  "version": "2.0.0",
+  "description": "Personal portfolio website for Sudhanshu Singh",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "lint": "eslint . --ext .js",
+    "format": "prettier --write \"**/*.{js,css,html,md}\""
+  },
+  "keywords": [
+    "portfolio",
+    "resume",
+    "cv"
+  ],
+  "author": "Sudhanshu Singh",
+  "license": "MIT",
+  "devDependencies": {
+    "vite": "^5.0.11",
+    "eslint": "^8.56.0",
+    "prettier": "^3.1.1",
+    "autoprefixer": "^10.4.16",
+    "postcss": "^8.4.33"
+  },
+  "dependencies": {
+    "bootstrap": "^5.3.2"
+  }
+}

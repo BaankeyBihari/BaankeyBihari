@@ -1,0 +1,137 @@
+/* =================================
+------------------------------------
+  Modern CSS Variables & Utilities
+  Version: 2.0
+ ------------------------------------ 
+ ====================================*/
+
+:root {
+    /* Colors */
+    --primary-color: #40424a;
+    --secondary-color: #808181;
+    --accent-color: #28d6f5;
+    --bg-light: #f2f7f8;
+    --bg-lighter: #f9f9f9;
+    --white: #fff;
+    --black: #000;
+    --text-dark: #40424a;
+    --text-light: #808181;
+    --border-color: #cacaca;
+
+    /* Typography */
+    --font-primary: 'Josefin Sans', sans-serif;
+    --font-accent: 'Dancing Script', cursive;
+    --font-body: 'Roboto', sans-serif;
+
+    /* Font Sizes - Responsive */
+    --fs-hero: clamp(4rem, 12vw, 170px);
+    --fs-section-title: clamp(2rem, 9vw, 72px);
+    --fs-h2: clamp(2rem, 5vw, 48px);
+    --fs-h3: clamp(1.5rem, 3vw, 30px);
+    --fs-body: clamp(1rem, 2vw, 18px);
+    --fs-small: clamp(0.875rem, 1.5vw, 16px);
+
+    /* Spacing */
+    --spacing-xs: 0.5rem;
+    --spacing-sm: 1rem;
+    --spacing-md: 2rem;
+    --spacing-lg: 4rem;
+    --spacing-xl: 6rem;
+
+    /* Layout */
+    --container-max-width: 1200px;
+    --border-radius: 10px;
+    --border-radius-sm: 5px;
+
+    /* Transitions */
+    --transition-fast: 0.2s ease;
+    --transition-normal: 0.3s ease;
+    --transition-slow: 0.4s ease;
+
+    /* Shadows */
+    --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.1);
+    --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 6px 20px 50px rgba(0, 0, 0, 0.15);
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+    /* Dark mode variables can be enabled in future updates */
+    /* Example:
+  :root {
+    --bg-light: #1a1a1a;
+    --text-dark: #ffffff;
+  }
+  */
+}
+
+/* Utility Classes */
+.text-primary {
+    color: var(--primary-color);
+}
+
+.text-secondary {
+    color: var(--secondary-color);
+}
+
+.bg-light {
+    background-color: var(--bg-light);
+}
+
+.bg-lighter {
+    background-color: var(--bg-lighter);
+}
+
+/* Responsive typography utilities */
+.fs-hero {
+    font-size: var(--fs-hero);
+}
+
+.fs-section {
+    font-size: var(--fs-section-title);
+}
+
+.fs-h2 {
+    font-size: var(--fs-h2);
+}
+
+.fs-h3 {
+    font-size: var(--fs-h3);
+}
+
+/* Accessibility */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
+/* Focus visible for keyboard navigation */
+*:focus-visible {
+    outline: 2px solid var(--accent-color);
+    outline-offset: 2px;
+}
+
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Performance optimization */
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}

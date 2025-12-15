@@ -36,6 +36,10 @@ I'm Sudhanshu, a passionate software leader, builder, and lifelong learner. With
   *Hyderabad, India*  
   Developed modem firmware for cutting-edge wireless technologies. Collaborated on core protocol stacks and delivered reliable, high-throughput embedded solutions.
 
+- **Member of Technical Staff** | Graphene Semiconductors | Jul 2016 – Jul 2017  
+  *Bengaluru, India*  
+  Collaborated with engineers at SanDisk to design and implement tests for their white box team. Led a team to implement these tests and extend the existing framework to execute more complicated scenarios.
+
 - **Oracle** | Associate Software Engineer / Software Developer | Jun 2012 – Jul 2013  
   *Bengaluru, India*  
   Built foundational tools for Solaris on SPARC as part of the ISV engineering team. Focused on robust, efficient software and cross-team communication.
