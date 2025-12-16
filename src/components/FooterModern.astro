@@ -1,0 +1,160 @@
+---
+// Modern footer
+const currentYear = new Date().getFullYear();
+const quickLinks = [
+  { label: "About", href: "#about" },
+  { label: "Projects", href: "#projects" },
+  { label: "Experience", href: "#experience" },
+  { label: "Contact", href: "#contact" }
+];
+---
+
+<footer class="footer-modern">
+  <div class="container">
+    <div class="footer-content">
+      <div class="footer-brand">
+        <h3 class="footer-logo">Sudhanshu<span class="text-gradient">.dev</span></h3>
+        <p class="footer-tagline">Building the future, one line at a time.</p>
+      </div>
+      
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <nav>
+          {quickLinks.map(link => (
+            <a href={link.href}>{link.label}</a>
+          ))}
+        </nav>
+      </div>
+      
+      <div class="footer-social">
+        <h4>Connect</h4>
+        <div class="social-icons">
+          <a href="https://github.com/BaankeyBihari" target="_blank" aria-label="GitHub">
+            <i class="fab fa-github"></i>
+          </a>
+          <a href="https://linkedin.com/in/baankeybihari" target="_blank" aria-label="LinkedIn">
+            <i class="fab fa-linkedin"></i>
+          </a>
+          <a href="https://twitter.com/BaankeyBihari" target="_blank" aria-label="Twitter">
+            <i class="fab fa-twitter"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+    
+    <div class="footer-bottom">
+      <p>© {currentYear} Sudhanshu Singh. Built with <a href="https://astro.build" target="_blank">Astro</a></p>
+      <p class="footer-credits">
+        Special thanks to <a href="https://colorlib.com" target="_blank">Colorlib</a> for the original template
+      </p>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .footer-modern {
+    background: var(--bg-secondary);
+    border-top: 1px solid var(--border-color);
+    padding: var(--space-16) 0 var(--space-8);
+  }
+  
+  .footer-content {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: var(--space-12);
+    margin-bottom: var(--space-12);
+  }
+  
+  .footer-logo {
+    font-size: var(--text-2xl);
+    font-weight: 700;
+    margin-bottom: var(--space-3);
+    font-family: var(--font-display);
+  }
+  
+  .footer-tagline {
+    color: var(--text-secondary);
+    font-size: var(--text-base);
+  }
+  
+  .footer-links h4,
+  .footer-social h4 {
+    font-size: var(--text-base);
+    font-weight: 600;
+    margin-bottom: var(--space-4);
+    color: var(--text-primary);
+  }
+  
+  .footer-links nav {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+  }
+  
+  .footer-links a {
+    color: var(--text-secondary);
+    text-decoration: none;
+    font-size: var(--text-sm);
+    transition: color var(--transition-fast);
+  }
+  
+  .footer-links a:hover {
+    color: var(--accent-primary);
+  }
+  
+  .social-icons {
+    display: flex;
+    gap: var(--space-3);
+  }
+  
+  .social-icons a {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--radius-full);
+    background: var(--bg-tertiary);
+    color: var(--text-secondary);
+    font-size: var(--text-lg);
+    transition: all var(--transition-base);
+  }
+  
+  .social-icons a:hover {
+    background: var(--accent-primary);
+    color: white;
+    transform: translateY(-3px);
+  }
+  
+  .footer-bottom {
+    text-align: center;
+    padding-top: var(--space-8);
+    border-top: 1px solid var(--border-color);
+  }
+  
+  .footer-bottom p {
+    color: var(--text-secondary);
+    font-size: var(--text-sm);
+    margin-bottom: var(--space-2);
+  }
+  
+  .footer-bottom a {
+    color: var(--accent-primary);
+    text-decoration: none;
+  }
+  
+  .footer-bottom a:hover {
+    text-decoration: underline;
+  }
+  
+  .footer-credits {
+    font-size: var(--text-xs);
+  }
+  
+  @media (max-width: 768px) {
+    .footer-content {
+      grid-template-columns: 1fr;
+      gap: var(--space-8);
+    }
+  }
+</style>

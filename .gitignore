@@ -5,6 +5,10 @@ package-lock.json
 # Build output
 dist/
 
+# Astro
+.astro/
+src/env.d.ts
+
 # Environment variables
 .env
 .env.local

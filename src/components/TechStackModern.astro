@@ -1,0 +1,133 @@
+---
+// Modern tech stack with icons
+const techStack = {
+  languages: [
+    { name: "Python", icon: "devicon-python-plain", color: "#3776AB" },
+    { name: "TypeScript", icon: "devicon-typescript-plain", color: "#3178C6" },
+    { name: "JavaScript", icon: "devicon-javascript-plain", color: "#F7DF1E" },
+    { name: "C++", icon: "devicon-cplusplus-plain", color: "#00599C" },
+    { name: "Go", icon: "devicon-go-plain", color: "#00ADD8" },
+  ],
+  frontend: [
+    { name: "React", icon: "devicon-react-original", color: "#61DAFB" },
+    { name: "Next.js", icon: "devicon-nextjs-plain", color: "#000000" },
+    { name: "Astro", icon: "devicon-astro-plain", color: "#FF5D01" },
+  ],
+  backend: [
+    { name: "Node.js", icon: "devicon-nodejs-plain", color: "#339933" },
+    { name: "FastAPI", icon: "devicon-fastapi-plain", color: "#009688" },
+  ],
+  cloud: [
+    { name: "AWS", icon: "devicon-amazonwebservices-plain-wordmark", color: "#FF9900" },
+    { name: "Azure", icon: "devicon-azure-plain", color: "#0078D4" },
+    { name: "Docker", icon: "devicon-docker-plain", color: "#2496ED" },
+    { name: "Kubernetes", icon: "devicon-kubernetes-plain", color: "#326CE5" },
+  ],
+  tools: [
+    { name: "Git", icon: "devicon-git-plain", color: "#F05032" },
+    { name: "Linux", icon: "devicon-linux-plain", color: "#FCC624" },
+    { name: "PostgreSQL", icon: "devicon-postgresql-plain", color: "#4169E1" },
+    { name: "MongoDB", icon: "devicon-mongodb-plain", color: "#47A248" },
+  ]
+};
+---
+
+<section class="tech-stack-section section-lg">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">Tech Stack</h2>
+      <p class="section-subtitle">Technologies and tools I work with</p>
+    </div>
+    
+    <div class="tech-categories">
+      {Object.entries(techStack).map(([category, techs]) => (
+        <div class="tech-category">
+          <h3 class="category-title">{category.charAt(0).toUpperCase() + category.slice(1)}</h3>
+          <div class="tech-grid">
+            {techs.map((tech, index) => (
+              <div class="tech-item animate-fadeInUp" style={`animation-delay: ${index * 50}ms`}>
+                <i class={`${tech.icon} colored`} style={`color: ${tech.color}`}></i>
+                <span class="tech-name">{tech.name}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .tech-stack-section {
+    background: var(--bg-secondary);
+  }
+  
+  .tech-categories {
+    display: grid;
+    gap: var(--space-12);
+  }
+  
+  .tech-category {
+    background: var(--bg-card);
+    padding: var(--space-8);
+    border-radius: var(--radius-2xl);
+    border: 1px solid var(--border-color);
+  }
+  
+  .category-title {
+    font-size: var(--text-xl);
+    font-weight: 700;
+    margin-bottom: var(--space-6);
+    color: var(--text-primary);
+    text-transform: capitalize;
+  }
+  
+  .tech-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: var(--space-4);
+  }
+  
+  .tech-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-2);
+    padding: var(--space-4);
+    background: var(--bg-secondary);
+    border-radius: var(--radius-lg);
+    transition: all var(--transition-base);
+    cursor: pointer;
+  }
+  
+  .tech-item:hover {
+    transform: translateY(-4px);
+    background: var(--bg-tertiary);
+  }
+  
+  .tech-item i {
+    font-size: 3rem;
+    transition: transform var(--transition-base);
+  }
+  
+  .tech-item:hover i {
+    transform: scale(1.1);
+  }
+  
+  .tech-name {
+    font-size: var(--text-sm);
+    font-weight: 500;
+    color: var(--text-secondary);
+    text-align: center;
+  }
+  
+  @media (max-width: 768px) {
+    .tech-grid {
+      grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    }
+    
+    .tech-item i {
+      font-size: 2.5rem;
+    }
+  }
+</style>
