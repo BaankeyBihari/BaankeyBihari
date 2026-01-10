@@ -17,6 +17,6 @@
   "author": "Sudhanshu Singh",
   "license": "MIT",
   "dependencies": {
-    "astro": "^4.16.18"
+    "astro": "^5.15.9"
   }
 }
